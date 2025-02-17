@@ -1,0 +1,7 @@
+The *core functionality* of this simulation is driven by the constructor (`__init__`), which initializes stock data (random prices, sector assignments), user portfolio details, and password-handling structures, and by the UI-building method (`display_ui`), which arranges interactive controls in a vertical layout. 
+User actions—like buying and selling shares or advancing the simulation day—trigger callback functions (e.g., `buy_shares_action`, `sell_shares_action`, and `next_day_action`) that update the portfolio and redraw displays through `show_trading_info`. 
+Meanwhile, the *analytical functions* enhance the user’s ability to understand and manage their investments. 
+For example, users can filter by sector in the *Analytics* section, generating a pandas DataFrame of all relevant stocks and displaying it in the output area. 
+They can also export current holdings to CSV (`download_csv_action`) to retain a record of their portfolio at any time. 
+The *bar chart* (`show_sector_bar_chart`) visually depicts how many shares the user owns in each sector, and the *pie chart* (`show_sector_pie_chart`) compares total holding value across sectors—both drawn with `matplotlib` for clear, intuitive insights. 
+Taken together, these “main” and “analytical” functions ensure that the simulator not only facilitates basic trading mechanics and real-time updates of portfolio value, but also provides robust tools for informed decision-making and data exploration.
